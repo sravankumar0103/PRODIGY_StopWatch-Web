@@ -1,0 +1,154 @@
+/* styles.css */
+
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111111; /* Very dark background color */
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* White text color */
+    position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.container {
+    text-align: center;
+    background-color: #1f1f1f; /* Darker background for container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #ffffff; /* White text color */
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger font size */
+    animation: fadeInUp 1s ease-out; /* Fade in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#display {
+    font-size: 3.5rem; /* Large font size for display */
+    color: #ffffff; /* White text color */
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, #222222, #111111); /* Gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#display:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    animation: slideInDown 1s ease-out; /* Slide in animation */
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    font-size: 1.2rem; /* Medium font size for buttons */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2c2c2c; /* Dark grey background for buttons */
+    color: #ffffff; /* White text color */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: #1a1a1a; /* Darker background on hover */
+    transform: translateY(-3px); /* Move button slightly up */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+#startStopBtn {
+    background-color: #00bcd4; /* Cyan background for start/stop button */
+}
+
+#resetBtn {
+    background-color: #e91e63; /* Pink background for reset button */
+}
+
+#laps {
+    margin-top: 30px;
+    text-align: left;
+    animation: slideInUp 1s ease-out; /* Slide in animation */
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lap {
+    font-size: 1rem; /* Medium font size for laps */
+    padding: 10px 15px;
+    background-color: #333333; /* Dark grey background for laps */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: #ffffff; /* White text color */
+}
+
+.lap:nth-child(even) {
+    background-color: #2c2c2c; /* Slightly darker background for even laps */
+}
+
+#title {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: rgba(255, 255, 255, 0.1); /* Very light black with transparency */
+    pointer-events: none; /* Ensure title does not interfere with clicks */
+}
